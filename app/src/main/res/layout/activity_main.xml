@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.igulu.classpproject.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/resultHolder"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#ccc"
+        app:layout_constraintTop_toBottomOf="@+id/search">
+
+        <TextView
+            android:id="@+id/resultName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:text="Ilkin"/>
+
+        <TextView
+            android:id="@+id/resultMeaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="italic"
+            android:textColor="#646464"
+            android:textSize="20dp"
+            android:text="lorem ipsum"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/resultName"/>
+
+    </android.support.constraint.ConstraintLayout>
+    
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ad Yazın"
+        android:background="#d2d2d2"
+        android:textAlignment="center"
+        android:padding="20dp"/>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#47d27d"
+        android:text="Axtar"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:onClick="sendRequest"/>
+
+
+
+
+   
+    
+</android.support.constraint.ConstraintLayout>
